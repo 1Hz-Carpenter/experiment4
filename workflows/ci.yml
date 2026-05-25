@@ -1,0 +1,15 @@
+name: 实验四 CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 拉代码
+        uses: actions/checkout@v4
+
+      - name: 打印成功
+        run: echo "实验四 GitHub Actions 运行成功！"
